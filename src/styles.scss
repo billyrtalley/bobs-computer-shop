@@ -1,1 +1,60 @@
+
 /* You can add global styles to this file, and also import other style files */
+@import './theme';
+
+html, body {
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.blue {
+  color: #1A237E;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.green {
+  color: #3F51B5;
+}
+
+.attribution-link {
+  text-decoration: none;
+  color: #8C9EFF;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+.card-title-icon {
+  text-align: center;
+
+}
+
+.card-title-icon, .mat-icon {
+  font-size: 72px;
+}
+
+.align-center {
+  text-align: center;;
+}
+
+.toolbar  {
+  background-color: #1A237E;
+}
+
+h1 {
+  padding-left: 55px;
+  font-size: 72px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+}
