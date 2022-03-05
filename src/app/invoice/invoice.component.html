@@ -1,1 +1,24 @@
-<p>invoice works!</p>
+<h1 mat-dialog-title>Invoice</h1>
+<div mat-dialog-content>
+  <div>
+    <strong>Selected Services:</strong>
+    <div *ngFor="let item of total.shopItems">
+      &nbsp; {{ item.work }} (${{ item.amount | number: '1.2-2' }})
+    </div>
+    <div mat-divider></div>
+    <strong>Subtotal:</strong> <p>&nbsp; {{ total.getShopTotal() | number: '1.2-2' }}</p>
+  </div>
+  <br />
+  <strong>Additional Fees:</strong>
+  <p>
+    &nbsp; Part Costs: {{ total.getPartsAmount() | number: '1.2-2' }}
+    <br>
+    &nbsp; Labor Costs: {{ total.getLaborAmount() | number: '1.2-2' }}
+  </p>
+  <div mat-divider></div>
+  <strong>Invoice Total:</strong> <p>&nbsp; {{ total.getBillTotal() | number: '1.2-2' }} </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button matDialogClose="cancel" color="primary">Cancel Order</button>
+  <button mat-raised-button matDialogClose="confirm" color="primary">Confirm Order</button>
+</div>

@@ -1,41 +1,57 @@
 
-<div fxLayout="row wrap" fxLayoutGap="20px">
-  <div fxFlex>
-    <mat-card class="services-card">
+<div class="home-container">
+  <div fxLayout="column" style="margin: 0 auto; width: 100%">
+    <div fxFlex>
+      <mat-card>
+        <br>
+        <mat-card-content>
+          <form #checkboxForm="ngForm" (submit)="submit()">
+            <div fxLayout="row wrap" fxLayoutGap="200px grid">
+              <div fxFlex="40%">
+                <mat-card class="mat-elevation-z8">
+                  <mat-card-title class="text-center">Services:</mat-card-title>
+                  <br>
+                  <mat-card-content>
+                    <div *ngFor="let item of workServices">
+                      <mat-checkbox value="{{item.amount}}" [(ngModel)]="item.checked" [name]="item.work" color="primary">
+                        {{ item.work }} - {{ item.amount | number: '1.2-2' }}
 
-     <mat-card-title>Select Services</mat-card-title>
-     <mat-card-subtitle>Please select at least one service</mat-card-subtitle>
-      <mat-card-content>
-          <mat-selection-list>
-            <mat-list-option>Password Reset ($39.99)</mat-list-option>
-            <mat-list-option>Spyware Removal ($99.99)</mat-list-option>
-            <mat-list-option>RAM Upgrade ($129.99)</mat-list-option>
-            <mat-list-option>Software Installation ($49.99)</mat-list-option>
-            <mat-list-option>Tune-up ($89.99)</mat-list-option>
-            <mat-list-option>Keyboard Cleaning ($45.00)</mat-list-option>
-            <mat-list-option>Disk Clean-up ($149.99)</mat-list-option>
-          </mat-selection-list>
-      </mat-card-content>
 
-          <br /><br />
-          <mat-card-title>Parts and Labor</mat-card-title>
-        <mat-card-subtitle>Enter parts cost and labor hours</mat-card-subtitle>
-        <mat-card-content class="parts-labor">
-          <mat-form-field >
-            <mat-label>Cost of Parts</mat-label>
-            <input matInput placeholder="Parts cost">
-          </mat-form-field>
-          <br />
-          <mat-form-field>
-            <mat-label>Labor ($50 per hour)</mat-label>
-            <input matInput placeholder="# of hours">
-          </mat-form-field>
-          <br /><br />
+                      </mat-checkbox>
+                    </div>
+                    <br>
+                    <hr class="line">
+                    <br>
+                    <p>Additional Fees:</p>
+                    <mat-form-field appearance="fill" color="accent">
+                      <mat-label>Parts Total</mat-label>
+                      <input matInput [(ngModel)]="total.partsAmount" type="number" name="parts" />
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill" color="accent">
+                      <mat-label>Labor Costs @ $10.00 per hr</mat-label>
+                      <input matInput [(ngModel)]="total.laborAmount" type="number" name="labor" />
+                    </mat-form-field>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-raised-button color="primary" class="submit-button">Submit Order</button>
+                  </mat-card-actions>
+                </mat-card>
 
-            <button type="submit" mat-raised-button color="accent" >Submit</button>
+              </div>
+              <div fxFlex="20%">
+                <div fxLayout="column" class="computer-repairman">
+                  <div>
+                    <img class="computer-repairman" src="../../assets/jeshoots-com-resize.jpg" alt="laptop with neon lights">
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </form>
         </mat-card-content>
       </mat-card>
+    </div>
   </div>
-
 </div>
-

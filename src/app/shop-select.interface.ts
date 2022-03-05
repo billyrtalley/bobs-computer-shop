@@ -1,15 +1,15 @@
 /*
 ============================================
-; Title: Exercise 9.3 Form Validation
+; Title: Exercise 9.3 Bob’s Computer Repair Shop Delivery
 ; Author: Professor Krasso
-; Date: March 1, 2022
+; Date: March 2-5, 2022
 ; Modified By: William Talley
 ; Description: Bob's Computer Repair Shop App shop-select.interface file
+;Source:
 ;===========================================
 */
 
-export interface ShopSelect {
-  amount: number;
-  title: string;
-  checked: boolean;
+import { ShopSelect } from "./work.interface";
+
+export interface WorkService extends ShopSelect {
 }

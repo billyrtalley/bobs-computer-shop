@@ -1,4 +1,9 @@
-
+// // Title: SASS: Menu Hover Effects
+// // Author: Lukasik, Martin
+// // Modified by: William Talley
+// // Date: n.d.
+// // Date Accessed: March 5, 2022
+// // Description: Additional effects to enhance call to action on logo as a home link
 /* You can add global styles to this file, and also import other style files */
 @import './theme';
 
@@ -57,4 +62,37 @@ h1 {
 p {
   font-size: 18px;
   font-weight: 500;
+}
+
+// Title: SASS: Menu Hover Effects
+// Author: Lukasik, Martin
+// Modified by: William Talley
+// Date: n.d.
+// Date Accessed: March 5, 2022
+// Description: Additional effects to enhance call to action on logo as a home link
+
+/* ========= VARIABLES ========= */
+
+$bgColorLiBefore: #1A237E;
+$bgColorLi: #3F51B5;
+$radius: 4px;
+
+/* ========= MIXINS ========= */
+
+@mixin transition {
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+
+.robot {
+  cursor: pointer;
+  background-color: #1A237E;
+
+}
+
+.robot:hover {
+  background: $bgColorLi;
 }

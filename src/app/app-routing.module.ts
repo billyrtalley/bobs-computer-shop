@@ -1,8 +1,8 @@
 /*
 ============================================
-; Title: Exercise 9.3 Form Validation
+; Title: Exercise 9.3 Bob’s Computer Repair Shop Delivery
 ; Author: Professor Krasso
-; Date: March 1, 2022
+; Date: March 2-5, 2022
 ; Modified By: William Talley
 ; Description: Bob's Computer Repair Shop App app-routing module file
 ;===========================================
@@ -10,10 +10,11 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ServicesComponent} from './services/services.component';
-import { InvoiceComponent } from './invoice/invoice.component';
-import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { ServicesComponent } from './services/services.component';
+
+
 
 const routes: Routes = [
   {
@@ -26,12 +27,13 @@ const routes: Routes = [
   },
   {
     path: 'services',
-    component: ServicesComponent
+    component: ServicesComponent,
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
   }
+
 
 ];
 
