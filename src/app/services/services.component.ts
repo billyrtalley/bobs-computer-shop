@@ -42,7 +42,7 @@ export class ServicesComponent implements OnInit {
       item.checked = false;
     }
     //Returning new total object
-    // this.total = new Total();
+    this.total = new Total();
   }
 
   submit(): void {
